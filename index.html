@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Informações sobre a página. -->
+    <meta name="author" content="William Rodrigues">
+    <meta name="keywords" content="Imersão Dev, Alura, filmes, aula 5, desafio">
+    <meta name="description" content="AluraFlix é um site de filmes onde você pode adicionar o seu filme favorito e ver informações sobre ele. É um projeto criado para o desafio 5 da Imersão Dev da Alura.">
+
+    <!-- Favicon criado usando https://favicon.io/ -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <title>AluraFlix | Boas vindas!</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <a id="go-top"></a>
+    <!-- Navegação da página. -->
+    <header>
+      <nav class="nav-container">
+        <a class="title" href="/" title="Ir para a página inicial">
+          Alura<span class="highlight">Flix</span>
+        </a>
+        <form class="search-form">
+          <p class="error" id="search-movie-name-error">Este filme não foi encontrado.</p>
+          <input class="field" id="search-movie-name" type="text" placeholder="Pesquisar pelos filmes adicionados" required>
+          
+          <button class="action" type="submit" title="Pesquisar">
+            <img src="images/search-icon.png" alt="Ícone de uma lupa para submeter a pesquisa">
+          </button>
+        </form>
+      </nav>
+    </header>
+
+    <!-- Conteúdo principal da página. -->
+    <main>
+      <div class="main-container">
+        <form class="add-movie-form">
+          <p class="error" id="unknown-error">
+            Um erro inesperado ocorreu, verifique sua conexão com a internet.
+          </p>
+
+          <label class="label" for="movie-name">Adicione o seu filme favorito:</label>
+          <input class="field" type="text" id="movie-name" placeholder="Nome do filme (inglês/português)" required>
+          <p class="error" id="movie-name-error">Este filme não foi encontrado.</p>
+          <p class="error" id="movie-already-added">Este filme já foi adicionado.</p>
+          
+          <label class="label" for="movie-release-year">Ano de lançamento (opcional):</label>
+          <input class="field" type="text" id="movie-release-year" maxlength="4" placeholder="YYYY">
+          <p class="error" id="movie-release-year-error">Digite um ano válido no formato “YYYY”.</p>
+          
+          <button class="action" type="submit" title="Adicionar filme">
+            Adicionar
+          </button>
+        </form>
+        
+        <div class="movies-container">
+          <h2 class="no-movies-message">
+            Adicione um filme!
+          </h2>
+        </div>
+
+        <!-- Botões de ações, um nunca vai estar presente com o outro. -->
+        <button class="remove-movies-button" title="Remover filmes">
+          Remover Filmes
+        </button>
+        <button class="back-movies-button" title="Voltar para os filmes">
+          &larr; Voltar
+        </button>
+
+        <section class="modal-container">
+          <div class="wrapper-modal"></div>
+        </section>
+      </div><!-- Aqui acaba o .main-container -->
+    </main>
+
+    <!-- Notas de rodapé. -->
+    <footer class="footer-container">
+      <div class="footer-start">
+        <div class="tooltip">
+          <p class="content">This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
+        </div>
+        <div class="arrow"></div>
+        <a href="https://www.themoviedb.org/" target="_blank" rel="external" title="Ir para o site do TMDB">
+          <img src="images/tmdb-logo.png" alt="Logo do TMDB (The Movie Database)">
+        </a>
+      </div>
+
+      <div class="footer-center">
+        <a class="title" href="https://imersao.dev/" target="_blank" rel="external" title="Ir para o site da Imersão Dev">
+          imersão <span class="box">dev_</span>
+        </a>
+        <p class="copyright">
+          Copyright &copy; <span id="current-year"></span> 
+          <a class="author" href="https://github.com/willy-r/" target="_blank" rel="external" title="Ir para o perfil no GitHub do autor da página">
+            William Rodrigues
+          </a>
+        </p>
+      </div>
+
+      <a class="footer-end" href="https://www.alura.com.br/" target="_blank" rel="external" title="Ir para o site da Alura">
+        Alura
+      </a>
+    </footer>
+
+    <!-- JavaScript -->
+    <!-- ES6 modules, navegadores que suportam: https://caniuse.com/es6-module -->
+    <script type="module" src="js/main.js"></script>
+    <script src="js/client.js"></script>
+  </body>
+</html>

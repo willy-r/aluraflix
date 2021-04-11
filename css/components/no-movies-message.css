@@ -1,0 +1,8 @@
+.no-movies-message {
+    color: var(--color-first);
+    font-size: 23px;
+    letter-spacing: 0.07em;
+    font-weight: bold;
+    text-decoration-line: underline;
+    text-align: center;
+}

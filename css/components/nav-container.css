@@ -1,0 +1,27 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 35px 38px 50px;
+}
+
+.nav-container > .title {
+    font: 40px var(--font-family-second);
+    color: var(--color-first);
+    border-bottom: 2px solid var(--color-first);
+    padding-bottom: 8px;
+    margin-right: 5px;
+}
+
+.title > .highlight {
+    background: var(--color-second);
+    border: 2px solid var(--color-first);
+    color: var(--color-first);
+    padding: 0 2px;
+}
+
+.title > .highlight:hover {
+    background: var(--color-first);
+    border: 2px solid var(--color-second);
+    color: var(--color-second);
+}

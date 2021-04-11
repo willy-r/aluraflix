@@ -1,0 +1,19 @@
+.remove-movies-button {
+    display: none;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--color-first);
+    background: var(--color-third);
+    border: 2px solid var(--color-first);
+    box-shadow: 4px 4px 0 var(--color-black-second);
+    width: 208px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 400ms ease-in-out;
+    margin-top: 25px;
+}
+
+.remove-movies-button:hover {
+    transform: scale(1.08);
+}

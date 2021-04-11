@@ -1,0 +1,11 @@
+.wrapper-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--font-family-third);
+    color: var(--color-black-first);
+    background: var(--color-first);
+    border: 8px solid var(--color-second);
+    width: 1050px;
+    height: 600px;
+}

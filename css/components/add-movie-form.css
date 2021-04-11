@@ -1,0 +1,60 @@
+.add-movie-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-top: 5px solid var(--color-first);
+    border-bottom: 5px solid var(--color-first);
+    padding: 15px 5px;
+    color: var(--color-first);
+    max-width: 535px;
+    margin-bottom: 105px;
+}
+
+.add-movie-form > .label {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    margin: 10px 0;
+}
+
+.add-movie-form > .field {
+    font-family: inherit;
+    font-size: 13px;
+    border: 3px solid var(--color-third);
+    box-shadow: 4px 4px 0px var(--color-black-second);
+    width: 308px;
+    height: 31px;
+    padding: 0 5px;
+    margin-bottom: 5px;
+}
+
+#movie-release-year {
+    width: 220px;
+}
+
+.add-movie-form > .error {
+    display: none;
+    color: var(--color-second);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.add-movie-form > .action {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color-first);
+    background: var(--color-third);
+    border: 2px solid var(--color-first);
+    box-shadow: 4px 4px 0 var(--color-black-second);
+    width: 260px;
+    height: 34px;
+    margin: 15px 0 10px;
+    cursor: pointer;
+    transition: transform 400ms ease-in-out;
+}
+
+.add-movie-form > .action:hover {
+    transform: scale(1.08);
+}

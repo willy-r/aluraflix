@@ -1,0 +1,35 @@
+.footer-center {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-center > .title {
+    font-family: var(--font-family-first);
+    font-size: 25px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: var(--color-first);
+    text-shadow: 4px 4px 0px var(--color-black-second);
+    margin-bottom: 15px;
+    transition: transform 300ms ease-in-out;
+}
+
+.footer-center > .title:hover {
+    transform: scale(1.08)
+}
+
+.title > .box {
+    background: var(--color-second);
+    border: 2px solid var(--color-first);
+    padding: 0 4px;
+    animation: blink 1.8s ease-in-out infinite;
+}
+
+.footer-center > .copyright {
+    font-size: 14px;
+    color: var(--color-gray);
+}
+
+.copyright > .author {
+    color: var(--color-first);
+}

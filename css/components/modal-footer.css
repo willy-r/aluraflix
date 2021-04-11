@@ -1,0 +1,19 @@
+.modal-footer {
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 5px solid var(--color-second);
+    padding: 20px 25px;
+}
+
+.modal-footer .title {
+    font-weight: bold;
+}
+
+.modal-footer .avaliation {
+    font-weight: normal;
+    background: var(--color-second);
+    color: var(--color-first);
+    padding: 5px 10px;
+}

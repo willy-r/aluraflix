@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+:root {
+    --color-first: #F1FAEE;
+    --color-second: #E63946;
+    --color-third: #457B9D;
+    
+    --color-gray: rgba(206, 192, 192, 0.4);
+    
+    --color-black-first: #161A1D;
+    --color-black-second: rgba(0, 0, 0, 0.6);
+
+    --font-family-first: 'Roboto Mono', monospace;
+    --font-family-second: 'Fredoka One', cursive;
+    --font-family-third: 'Ubuntu', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color-black-first);
+    font-family: var(--font-family-first);
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,46 @@
+.movie-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 30px;
+    transition: transform 400ms ease-in-out;
+    position: relative;
+}
+
+.movie-wrapper:hover {
+    transform: scale(1.04);
+}
+
+.movie-wrapper .action {
+    font: 18px var(--font-family-second);
+    font-weight: bold;
+    background-color: var(--color-first);
+    border: 3px solid var(--color-second);
+    color: var(--color-second);
+    border-radius: 9999px;
+    text-align: center;
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    cursor: pointer;
+    transition: transform 300ms ease-in-out;
+}
+
+.movie-wrapper .action:hover {
+    transform: scale(1.09) rotate(-180deg);
+}
+
+.movie-wrapper > .poster {
+    border: 2px solid var(--color-first);
+}
+
+.movie-wrapper > .name {
+    font: 16px var(--font-family-second);
+    line-height: 15px;
+    color: var(--color-second);
+    text-shadow: 2px 2px 0px var(--color-black-second);
+    border: 2px solid var(--color-first);
+    border-top: 0;
+    padding: 10px;
+    width: 189px;
+    text-align: center;
+}

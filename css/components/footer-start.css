@@ -1,0 +1,46 @@
+.footer-start {
+    position: relative;
+    left: 5px;
+}
+
+.footer-start > .tooltip {
+    opacity: 0;
+    pointer-events: none;
+    background-color: var(--color-third);
+    border-radius: 2px;
+    bottom: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-45%, -8px);
+    z-index: 10;
+    width: 100px;
+    padding: 3px;
+}
+
+.tooltip > .content {
+    color: var(--color-first);
+    font-size: 11px;
+    line-height: 12px;
+    text-align: center;
+    text-justify: justify;
+}
+
+.footer-start > .arrow {
+    opacity: 0;
+    pointer-events: none;
+    border: 8px solid transparent;
+    border-top-color: var(--color-third);
+    bottom: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 5px);
+    height: 0;
+    width: 0;
+    z-index: 10;
+}
+
+.footer-start:hover .tooltip,
+.footer-start:hover .arrow {
+    opacity: 1;
+    pointer-events: initial;
+}

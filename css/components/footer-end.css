@@ -1,0 +1,5 @@
+.footer-end {
+    color: var(--color-first);
+    font-size: 25px;
+    text-shadow: 4px 4px 0px var(--color-black-second);
+}

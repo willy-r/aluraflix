@@ -1,0 +1,34 @@
+.modal-header {
+    font-size: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid var(--color-second);
+    padding: 10px 25px;
+}
+
+.modal-header > .title {
+    font-weight: bold;
+}
+
+.title > .release {
+    font-weight: normal;
+}
+
+.modal-header > .action {
+    font: 25px var(--font-family-second);
+    font-weight: bold;
+    background-color: var(--color-first);
+    border: 5px solid var(--color-second);
+    color: var(--color-second);
+    border-radius: 9999px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    transition: transform 300ms ease-in-out;
+    padding-bottom: 5px;
+}
+
+.modal-header > .action:hover {
+    transform: scale(1.09);
+}
