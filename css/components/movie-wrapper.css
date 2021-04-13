@@ -18,6 +18,7 @@
     color: var(--color-second);
     border-radius: 9999px;
     text-align: center;
+    padding: 0 8px;
     position: absolute;
     right: 5px;
     top: 6px;

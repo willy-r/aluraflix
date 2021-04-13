@@ -26,11 +26,16 @@ function removeMoviesButton(display = false) {
 // Mostra apenas o filme que foi pesquisado se ele existir, escondendo todos os outros.
 function displayAddedMovie(movie) {
   const movies = document.querySelectorAll('.movie-wrapper');
+  const re = new RegExp(movie, 'i');
 
   movies.forEach(function(movieWrapper) {
-    const movieName = movieWrapper.querySelector('.name').textContent.toLowerCase().trim();
+    const movieName = movieWrapper.querySelector('.name').textContent;
     
-    if (movie !== movieName) {
+    if (re.test(movieName)) {
+      console.log('Mostrando o filme:', movieName);
+      movieWrapper.style.display = 'flex';
+    } else {
+      console.log('Escondendo o filme:', movieName);
       movieWrapper.style.display = 'none';
     }
   });
@@ -42,19 +47,23 @@ function displayAddedMovie(movie) {
 function validateMovie(movie) {
   const movies = document.querySelectorAll('.movie-wrapper');
   const movieNames = [];
+  const re = new RegExp(movie, 'i');
   
   movies.forEach(function(movieWrapper) {
-    const movieName = movieWrapper.querySelector('.name').textContent.toLowerCase().trim();
-    movieNames.push(movieName);
-  });
+    const movieName = movieWrapper.querySelector('.name').textContent;
 
-  return movieNames.includes(movie);
+    if (re.test(movieName)) {
+      movieNames.push(movieName);
+    }
+  });
+  console.log(movieNames);
+  return movieNames.length !== 0;
 }
 
 // Procura pelo filme que foi adicionado, caso contrário exibe uma mensagem de erro.
 function searchForAddedMovie() {
   const movieNameInput = document.querySelector('#search-movie-name');
-  const movieName = movieNameInput.value.toLowerCase();
+  const movieName = movieNameInput.value;
 
   if (validateMovie(movieName)) {
     displayAddedMovie(movieName);
@@ -81,7 +90,8 @@ function displayMovieOnScreen(movieDetails) {
   const figure = `
   <figure class="movie-wrapper">
     <a href="#go-top">
-      <button class="action" id="display-modal-button" title="Fechar"
+      <button class="action" id="display-modal-button" 
+        title="Ver informações do filme ${movieDetails['title']}"
         data-movie-name="${movieDetails['title'].replace(/\"/g, '&#34;')}"
         data-release-year="${movieDetails['releaseYear']}"
         data-synopsis="${movieDetails['synopsis'].replace(/\"/g, '&#34;')}"
@@ -115,7 +125,7 @@ async function addMovie() {
   
   const movieDetails = await getMovieDetails(movieNameInput.value, movieReleaseYearInput.value);
   if (movieDetails !== undefined) {
-    const movie = movieDetails['title'].toLowerCase();
+    const movie = movieDetails['title'];
 
     if (validateMovie(movie)) {
       movieAlreadyAdded();
