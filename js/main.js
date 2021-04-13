@@ -23,7 +23,7 @@ function removeMoviesButton(display = false) {
   }
 }
 
-// Mostra apenas o filme que foi pesquisado se ele existir, escondendo todos os outros.
+// Mostra os filmes que foram pesquisados pelo padrão digitado pelo usuário se ele existir, escondendo todos os outros.
 function displayAddedMovie(movie) {
   const movies = document.querySelectorAll('.movie-wrapper');
   const re = new RegExp(movie, 'i');
@@ -41,7 +41,7 @@ function displayAddedMovie(movie) {
   removeMoviesButton(false);
 }
 
-// Retorna true se o filme existir, se não retorna false.
+// Retorna true se algum dos filmes que foram adicionados existir, se não retorna false.
 function validateMovie(movie) {
   const movies = document.querySelectorAll('.movie-wrapper');
   const movieNames = [];
@@ -54,7 +54,6 @@ function validateMovie(movie) {
       movieNames.push(movieName);
     }
   });
-  console.log(movieNames);
   return movieNames.length !== 0;
 }
 
