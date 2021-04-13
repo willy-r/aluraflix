@@ -162,7 +162,7 @@ searchMovieForm.addEventListener('submit', function(event) {
 });
 
 const backButton = document.querySelector('.back-movies-button');
-backButton.addEventListener('click', backMoviesButton);
+backButton.addEventListener('click', backAllMovies);
 
 const removeButton = document.querySelector('.remove-movies-button');
 removeButton.addEventListener('click', removeMovies);
