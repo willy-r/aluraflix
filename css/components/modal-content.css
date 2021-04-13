@@ -11,10 +11,10 @@
 
 .synopsis > .title {
     font-weight: bold;
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .synopsis > .content {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 25px;
 }

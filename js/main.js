@@ -32,10 +32,8 @@ function displayAddedMovie(movie) {
     const movieName = movieWrapper.querySelector('.name').textContent;
     
     if (re.test(movieName)) {
-      console.log('Mostrando o filme:', movieName);
       movieWrapper.style.display = 'flex';
     } else {
-      console.log('Escondendo o filme:', movieName);
       movieWrapper.style.display = 'none';
     }
   });
@@ -105,6 +103,8 @@ function displayMovieOnScreen(movieDetails) {
   </figure>
   `;
   divMoviesContainer.insertAdjacentHTML('beforeend', figure);
+  noMoviesMessage(false);
+  backAllMovies();
 }
 
 // Mostra/limpa a mensagem quando um filme é adicionado/quando todos os filmes são removidos.
@@ -131,8 +131,6 @@ async function addMovie() {
       movieAlreadyAdded();
     } else {
       displayMovieOnScreen(movieDetails);
-      noMoviesMessage(false);
-      removeMoviesButton(true);
     }
   }
 
@@ -164,7 +162,7 @@ searchMovieForm.addEventListener('submit', function(event) {
 });
 
 const backButton = document.querySelector('.back-movies-button');
-backButton.addEventListener('click', backAllMovies);
+backButton.addEventListener('click', backMoviesButton);
 
 const removeButton = document.querySelector('.remove-movies-button');
 removeButton.addEventListener('click', removeMovies);

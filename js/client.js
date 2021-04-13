@@ -95,8 +95,17 @@ function clearModalOnClick(event) {
   }
 }
 
-modalContainer.addEventListener('click', clearModalOnClick);
-
-document.addEventListener('click', displayModal);
+// Limpa o modal quando a tecla "Esc" é pressionada.
+function clearModalOnEsc(event) {
+  if ((event.key === 'Escape') || (event.key === 'Esc')) {
+    clearModal();
+  }
+}
 
 document.addEventListener('DOMContentLoaded', displayCurrentYear);
+
+modalContainer.addEventListener('click', clearModalOnClick);
+
+document.addEventListener('keyup', clearModalOnEsc); 
+
+document.addEventListener('click', displayModal);
