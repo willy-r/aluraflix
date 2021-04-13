@@ -1,10 +1,11 @@
 # AluraFlix
 
-*AluraFlix* é um site para adicionar e visualizar as informações dos seus filmes favoritos.
+*[AluraFlix](https://willy-r.github.io/aluraflix/)* é um site para adicionar e visualizar as informações dos seus filmes favoritos.
 
-<img src="images/homepage.jpg" alt="Imagem da página inicial" style="width: 500px;">
-
-> Print tirado do navegador Firefox Developer Edition v88.0b9
+<figure align="center">
+  <img src="images/homepage.jpg" alt="Imagem da página inicial" width=500px>
+  <figcaption>Print tirado do navegador <strong>Firefox Developer Edition v88.0b9</strong></figcaption>
+</figure>
 
 ## Sobre
 
